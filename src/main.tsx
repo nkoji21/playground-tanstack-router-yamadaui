@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 import { routeTree } from './routeTree.gen'
-import { ColorModeScript, UIProvider } from '@workspaces/ui'
+import { ThemeSchemeScript, UIProvider } from '@workspaces/ui'
 import { config } from '@workspaces/theme'
 
 const router = createRouter({
@@ -22,7 +22,7 @@ if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement)
   root.render(
     <>
-      <ColorModeScript defaultValue={config.defaultColorMode} />
+      <ThemeSchemeScript defaultValue={config.defaultThemeScheme} />
       <UIProvider>
         <RouterProvider router={router} />
       </UIProvider>
